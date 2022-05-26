@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+
+{% block title %}Employee Dashboard{% endblock %}
+
+
+{% block links %}
+  <!-- Custom styles for this template-->
+  <link href="/static/css/sb-admin.css" rel="stylesheet">
+{% endblock %}
+{% block body %}
+
+<h1>Flights</h1>
+
+{%for flight in flights%}
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        Flight:ID:{{flight.id}}
+      </div>
+      <div class="col-sm">
+        Origin:{{flight.origin}} 
+      </div>
+      <div class="col-sm">
+        Destination:{{flight.destination}}
+      </div>
+      <div class="col-sm">
+        Duration:{{flight.duration}} minutes
+      </div>
+    </div>
+  </div>
+  {%endfor%}
+{% endblock %}
