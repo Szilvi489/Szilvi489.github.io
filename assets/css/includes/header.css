@@ -1,0 +1,48 @@
+/* Header Container */
+.site-header {
+    background-color: #ffffff;
+    padding: 15px 20px; /* Add some padding for spacing */
+    border-bottom: 1px solid #ddd;
+    display: flex; /* Enable flexbox for layout */
+    justify-content: center; /* Center the container */
+}
+
+.container {
+    display: flex; /* Enable flexbox for layout */
+    justify-content: space-between; /* Push items to opposite ends of the container */
+    width: 100%; /* Ensure the container takes full width */
+    max-width: 1200px; /* Optional: limit the maximum width */
+    align-items: center; /* Center items vertically */
+}
+
+/* Site Title (Home Link) */
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin: 0;
+}
+
+/* Menu Container */
+.site-nav {
+    display: flex; /* Align menu items horizontally */
+}
+
+/* Menu Links */
+.menu {
+    display: flex; /* Inline layout for menu items */
+    gap: 20px; /* Space between menu items */
+}
+
+.menu-item {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.menu-item:hover {
+    color: #007acc;
+    text-decoration: underline;
+}

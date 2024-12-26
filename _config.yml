@@ -20,14 +20,11 @@
 
 title: Szilvia Varga
 email: szilviemailje@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: # this means to ignore newlines until "baseurl:"
+  The description of my site
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Szilvi489
-
 # Build settings
 theme: minima
 plugins:
@@ -55,5 +52,14 @@ plugins:
 
 sass:
   sass_dir: assets/css
+
+collections:
+    projects:
+      output: true
+    documentations:
+      output: true
+    menuitems:
+        output: true
+
 
 

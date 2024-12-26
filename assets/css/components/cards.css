@@ -1,0 +1,84 @@
+/* Card Styling */
+/* Card Container Styling */
+.card-container {
+    display: flex; /* Enable flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping to the next row if there's not enough space */
+    gap: 20px; /* Spacing between the cards */
+    justify-content: center; /* Center the cards horizontally */
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px; /* Add padding around the container */
+}
+
+/* Common Card Styling */
+.card {
+    display: flex; /* Use flexbox for card content */
+    flex-direction: column; /* Arrange content vertically */
+    /*border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle 3D shadow */
+    background-color: #fff; /* Card background */
+    text-decoration: none; /* Remove link underline */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth animation */
+    overflow: hidden; /* Ensure child elements stay within rounded corners */
+    flex: 1 1 calc(33.333% - 40px); /* Cards take 1/3 of the width minus gap */
+    max-width: 500px; /* Prevent cards from growing too large */
+    min-width: 280px; /* Ensure a minimum width for smaller screens */
+    margin: 3px; /* Add spacing between cards */
+    box-sizing: border-box; /* Include padding/borders in width calculations */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-10px); /* Move card up slightly */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+}
+
+/* Card Image */
+.card-image {
+    width: 100%; /* Full width within the card */
+    height: 200px; /* Fixed height for the image */
+    overflow: hidden; /* Prevent overflowing if image is larger */
+    border-bottom: 1px solid #ddd; /* Separator line under the image */
+}
+
+.card-image img {
+    width: 100%; /* Scale image to fit width */
+    height: 100%; /* Scale image to fit height */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+}
+
+/* Card Content */
+.card-content {
+    padding: 15px; /* Add spacing inside the card */
+    text-align: center; /* Center-align text */
+}
+
+/* Card Title */
+.card-content h3 {
+    font-size: 1.2rem;
+    color: #333; /* Darker title color */
+    margin: 10px 0;
+}
+
+/* Card Description */
+.card-content p {
+    font-size: 0.9rem;
+    color: #666; /* Muted color for description */
+    line-height: 1.4;
+    margin: 0;
+    overflow: hidden; /* Prevent content overflow */
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+    white-space: nowrap; /* Ensure text stays in one line */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 40px); /* Two cards per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* One card per row on small devices */
+    }
+}

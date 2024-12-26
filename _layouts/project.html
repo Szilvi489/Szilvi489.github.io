@@ -1,0 +1,30 @@
+---
+layout: base
+---
+
+<article class="project">
+    <header>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.short_description }}</p>
+    </header>
+
+    <section>
+        <h2>About this Project</h2>
+        {{ content }}
+    </section>
+
+    <section>
+        <h2>Documentation</h2>
+        <div class="card-container">
+                {% assign docs = site.documentations | where: "project", page.title %}
+                {% for doc in docs %}
+                <a href="{{ doc.url | relative_url }}" class="card card-docus">
+                    <div class="card-content">
+                        <h3>{{ doc.title }}</h3>
+                        <p>{{ doc.short_description }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+        </div>
+    </section>
+</article>

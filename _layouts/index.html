@@ -1,14 +1,31 @@
 ---
 layout: base
 ---
+<div class="projects">
+    <h2>Projects</h2>
+    <div class="card-container">
+        {% for project in site.projects %}
+        <a href="{{ project.url | relative_url }}" class="card card-projects">
+            {% if project.image %}
+            <div class="card-image">
+                <img src="{{ project.image }}" alt="{{ project.title }}">
+            </div>
+            {% endif %}
+            <div class="card-content">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.short_description }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
 
-<div class="index">
+<div class="page">
     {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
     {%- endif -%}
 
     {{ content }}
-
 
     {% if site.paginate %}
     {% assign posts = paginator.posts %}

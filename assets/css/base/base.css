@@ -1,0 +1,121 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding/border is included in element dimensions */
+}
+
+/* Body Styling */
+html, body {
+    font-family: 'Arial', sans-serif; /* Default font for the website */
+    line-height: 1.6; /* Improve readability */
+    color: #333; /* Default text color */
+    background-color: #f9f9f9; /* Light gray background */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the entire page content */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure it takes full height */
+}
+
+/* Main content should take the remaining space */
+.site-content {
+    flex: 1;
+    /*padding: 50px; /* Add padding around the content */
+     display: flex;
+        justify-content: center; /* Center the content horizontally */
+        background-color: #f0f0f0; /* Background color for the entire content area */
+        padding: 20px; /* Padding around the content */
+
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #222; /* Slightly darker color for headings */
+    font-weight: bold; /* Emphasize headings */
+    margin-bottom: 10px; /* Space below headings */
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem; /* Large for main headings */
+}
+
+h2 {
+    font-size: 2rem; /* Slightly smaller for subheadings */
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 15px; /* Add spacing after paragraphs */
+    color: #555; /* Muted text color for paragraphs */
+}
+
+/* Links */
+a {
+    color: #007acc; /* Default link color */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+    color: #005f99; /* Darker blue on hover */
+}
+
+/* Lists */
+ul, ol {
+    margin-bottom: 15px; /* Space below lists */
+    padding-left: 20px; /* Indent list items */
+}
+
+li {
+    margin-bottom: 5px; /* Space between list items */
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center; /* Center text */
+}
+
+.text-right {
+    text-align: right; /* Align text to the right */
+}
+
+.text-left {
+    text-align: left; /* Align text to the left */
+}
+
+.container {
+    max-width: 1200px; /* Limit container width */
+    margin: 0 auto; /* Center container */
+    padding: 0 1px; /* Add horizontal padding */
+}
+.wrapper {
+    max-width: 1000px; /* Maximum width for the content */
+    width: 100%; /* Ensure it takes full width up to the max-width */
+    background-color: #ffffff; /* Background color for the content */
+    padding: 30px; /* Padding inside the content area */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    /*border-radius: 8px; /* Optional: Add rounded corners */
+}
