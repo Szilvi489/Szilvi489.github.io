@@ -2,7 +2,7 @@
 layout: project
 title: "Project Number One"
 short_description: "A quick description of this project."
-image: "/assets/images/project1.png"
+image: "/assets/images/projects/Project1/project1.png"
 category: projects
 url: "/_projects/Project1/"
 ---
