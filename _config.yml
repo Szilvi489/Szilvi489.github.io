@@ -4,27 +4,23 @@
 # which you are expected to set up once and rarely edit after that. If you find
 # yourself editing this file very often, consider using Jekyll's data files
 # feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
+
 # If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 
-title: Szilvia Varga
+name: SZILVIA VARGA
+title: Szilvia Varga - Portfolio
 email: szilviemailje@gmail.com
-description: # this means to ignore newlines until "baseurl:"
-  The description of my site
+description: VIENNA BASED BACKEND DEVELOPER
+#socials
+linkedin: https://www.linkedin.com/in/szilviavarga1/
+github: https://github.com/Szilvi489
+instagram: https://www.instagram.com/thisistheweedwegot/
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Szilvi489
+
 # Build settings
 theme: minima
 plugins:
@@ -66,6 +62,8 @@ collections:
       output: true
     menuitems:
         output: true
+    project_categories:
+      output: true
 
 
 

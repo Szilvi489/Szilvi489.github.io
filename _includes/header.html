@@ -1,7 +1,11 @@
 <header class="site-header">
+    <div id="namediv">
+        <a id="namelink" href="{{ "/" | relative_url }}">{{ site.name }}</a>
+        <p id="description">{{ site.description }}</p>
+    </div>
     <div class="container">
         <!-- Home Link -->
-        <a class="site-title" href="{{ "/" | relative_url }}">Home</a>
+        <a id="site-title" href="{{ "/" | relative_url }}">HOME</a>
 
         <!-- Menu Items -->
         <nav class="site-nav">

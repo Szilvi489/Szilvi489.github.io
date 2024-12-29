@@ -1,48 +1,76 @@
 /* Header Container */
 .site-header {
     background-color: #ffffff;
-    padding: 15px 20px; /* Add some padding for spacing */
-    border-bottom: 1px solid #ddd;
-    display: flex; /* Enable flexbox for layout */
-    justify-content: center; /* Center the container */
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
 }
 
 .container {
-    display: flex; /* Enable flexbox for layout */
-    justify-content: space-between; /* Push items to opposite ends of the container */
-    width: 100%; /* Ensure the container takes full width */
-    max-width: 1200px; /* Optional: limit the maximum width */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    justify-content: space-between;
+    width: 58%;
+    max-width: 1200px;
+    align-items: center;
+    margin: 20px 0;
 }
 
 /* Site Title (Home Link) */
-.site-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
+#site-title {
+    font-size: 1rem;
+    color: #999;
     text-decoration: none;
     margin: 0;
+}
+#site-title:hover {
+    color: #007acc;
 }
 
 /* Menu Container */
 .site-nav {
-    display: flex; /* Align menu items horizontally */
+    display: flex;
 }
 
 /* Menu Links */
 .menu {
-    display: flex; /* Inline layout for menu items */
-    gap: 20px; /* Space between menu items */
+    display: flex;
+    gap: 20px;
 }
 
 .menu-item {
     font-size: 1rem;
-    color: #333;
+    color: #999;
     text-decoration: none;
-    transition: color 0.3s ease; /* Smooth hover effect */
+    transition: color 0.3s ease;
 }
 
 .menu-item:hover {
     color: #007acc;
-    text-decoration: underline;
+}
+#namelink {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin: 0;
+    letter-spacing: 1.1rem;
+}
+#namelink:hover {
+    color: #007acc;
+}
+
+#namediv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+#description {
+    color: #999;
+    font-size: 1rem;
+    margin: 5px 0;
+    letter-spacing: 0.9rem;
 }

@@ -1,0 +1,31 @@
+---
+layout: base
+---
+
+<article class="project-category">
+    <header>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.short_description }}</p>
+    </header>
+
+    <section>
+        <h2>Projects in this Category</h2>
+        <div class="card-container">
+            {% assign category = page.title %}
+            {% assign projects = site.projects | where: "category", category %}
+            {% for project in projects %}
+            <a href="{{ project.url | relative_url }}" class="card card-projects">
+                {% if project.image %}
+                <div class="card-image">
+                    <img src="{{ project.image }}" alt="{{ project.title }}">
+                </div>
+                {% endif %}
+                <div class="card-content">
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.short_description }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+</article>
