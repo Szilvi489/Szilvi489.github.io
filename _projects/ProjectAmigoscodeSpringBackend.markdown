@@ -214,17 +214,9 @@ public class StudentController {
 
 ---
 
-## **📝 Future Improvements**
-- **Add Spring Security for authentication**.
-- **Implement Swagger for API documentation**.
-- **Dockerize the application for easy deployment**.
-
----
-
 ## **📌 Conclusion**
 This **Student Management System** is a simple, **Spring Boot-based** project that demonstrates how to build **REST APIs** with **Spring Data JPA and MySQL**. It follows **best practices** by using a **service layer, repository pattern, and entity classes**.
 
-🚀 **Now fully documented!** 🎉 Let me know if you need modifications! 😊
 
 
 
