@@ -1,0 +1,10 @@
+#githubrepo {
+
+}
+#githubrepoinproject a, #githubrepoinproject h3 {
+  cursor: pointer;
+}
+#githubrepo :hover {
+  color: #000;
+  cursor: pointer;
+}

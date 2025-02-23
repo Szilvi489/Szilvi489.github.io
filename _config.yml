@@ -13,10 +13,12 @@ name: SZILVIA VARGA
 title: Szilvia Varga - Portfolio
 email: szilviemailje@gmail.com
 description: VIENNA BASED BACKEND DEVELOPER
+
 #socials
 linkedin: https://www.linkedin.com/in/szilviavarga1/
 github: https://github.com/Szilvi489
 instagram: https://www.instagram.com/thisistheweedwegot/
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Szilvi489

@@ -10,21 +10,27 @@ layout: base
 
     <section>
         <h2>About this Project</h2>
+        <div id="githubrepo">
+            <h3>Github Repository</h3>
+            <a>{{ page.githubRepo }}</a>
+        </div>
         {{ content }}
     </section>
 
+    {% assign docs = site.documentations | where: "project", page.title %}
+    {% if docs.size > 0 %}
     <section>
         <h2>Documentation</h2>
         <div class="card-container">
-                {% assign docs = site.documentations | where: "project", page.title %}
-                {% for doc in docs %}
-                <a href="{{ doc.url | relative_url }}" class="card card-docus">
-                    <div class="card-content">
-                        <h3>{{ doc.title }}</h3>
-                        <p>{{ doc.short_description }}</p>
-                    </div>
-                </a>
-                {% endfor %}
+            {% for doc in docs %}
+            <a href="{{ doc.url | relative_url }}" class="card card-docus">
+                <div class="card-content">
+                    <h3>{{ doc.title }}</h3>
+                    <p>{{ doc.short_description }}</p>
+                </div>
+            </a>
+            {% endfor %}
         </div>
     </section>
+    {% endif %}
 </article>
