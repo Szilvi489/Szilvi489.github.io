@@ -6,37 +6,37 @@ image: "/assets/images/projects/ProjectMicroservices/SpringCloudMicroservices.jp
 category: "Springboot Projects"
 url: "/_projects/Project3/"
 ---
-# 🚀 Microservices-based E-Commerce System
+# Microservices-based E-Commerce System
 
-A **Spring Boot Microservices** project implementing **Product, Inventory, and Order services**, using **Eureka Service Discovery**, **Feign Clients**, and **MongoDB**, all deployed using **Docker**.
+A Spring Boot microservices project implementing Product, Inventory, and Order services, using Eureka Service Discovery, Feign Clients, and MongoDB, all deployed using Docker.
 
 ---
 
-## **📌 Project Overview**
-This project is a **microservices-based architecture** for an e-commerce system. It consists of **three main microservices**:
+## Project Overview
+This project is a microservices-based architecture for an e-commerce system. It consists of three main microservices:
 - **Product Service** → Manages product catalog (name, description, price).
 - **Inventory Service** → Keeps track of product stock availability.
 - **Order Service** → Handles customer orders, checks stock, and fetches product details before saving orders.
 
-Each microservice is **independent**, communicates via **Feign Clients**, and registers itself with **Eureka Service Discovery**.
+Each microservice is independent, communicates via Feign Clients, and registers itself with Eureka Service Discovery.
 
 ---
 
-## **⚙️ Technologies Used**
+## Technologies Used
 
 | Technology         | Description |
 |--------------------|------------|
-| **Spring Boot 3**  | Framework for building Java microservices |
-| **Spring Cloud**  | Provides tools for microservices communication |
-| **Spring Data MongoDB**  | Simplifies interaction with MongoDB |
-| **Spring Cloud OpenFeign** | Makes inter-service communication easy |
-| **Eureka Server**  | Service discovery for microservices |
-| **Docker**        | Containerization for running services |
-| **Postman**       | API testing tool |
+| Spring Boot 3  | Framework for building Java microservices |
+| Spring Cloud  | Provides tools for microservices communication |
+| Spring Data MongoDB  | Simplifies interaction with MongoDB |
+| Spring Cloud OpenFeign | Makes inter-service communication easy |
+| Eureka Server  | Service discovery for microservices |
+| Docker  | Containerization for running services |
+| Postman  | API testing tool |
 
 ---
 
-## **📜 Architecture Overview**
+## Architecture Overview
 ```
                       +--------------------+
                       |    Eureka Server   |
@@ -58,42 +58,42 @@ Each microservice is **independent**, communicates via **Feign Clients**, and re
                       +----------------+
 ```
 Each microservice:
-- **Registers itself with Eureka**
-- **Uses Feign Clients for communication**
-- **Stores data in MongoDB**
-- **Runs inside a Docker container**
+- Registers itself with Eureka
+- Uses Feign Clients for communication
+- Stores data in MongoDB
+- Runs inside a Docker container
 
 ---
 
-## **🛠️ Setting Up the Project**
-### **1️⃣ Clone the Repository**
+## Setting Up the Project
+### 1. Clone the Repository
 ```bash
 git //TODO
 cd microservices-project
 ```
 
-### **2️⃣ Run Eureka Server**
-Eureka is a **service registry** that enables microservices to discover each other.
+### 2. Run Eureka Server
+Eureka is a service registry that enables microservices to discover each other.
 ```bash
 cd eureka-server
 ./mvnw spring-boot:run
 ```
-📌 **Eureka UI available at:** [`http://localhost:8761/`](http://localhost:8761/)
+Eureka UI is available at: [`http://localhost:8761/`](http://localhost:8761/)
 
-### **3️⃣ Start Microservices**
+### 3. Start Microservices
 Start each microservice one by one:
 
-#### **📦 Product Service**
+#### Product Service
 ```bash
 cd product-service
 ./mvnw spring-boot:run
 ```
-#### **📦 Inventory Service**
+#### Inventory Service
 ```bash
 cd inventory-service
 ./mvnw spring-boot:run
 ```
-#### **📦 Order Service**
+#### Order Service
 ```bash
 cd order-service
 ./mvnw spring-boot:run
@@ -101,37 +101,37 @@ cd order-service
 
 ---
 
-## **🚢 Running with Docker**
-We use **Docker Compose** to containerize and run all microservices.
+## Running with Docker
+We use Docker Compose to containerize and run all microservices.
 
-### **1️⃣ Build the Docker Containers**
+### 1. Build the Docker Containers
 ```bash
 docker-compose up -d
 ```
-📌 **Check Running Containers:**
+To check running containers:
 ```bash
 docker ps
 ```
 
-### **2️⃣ Services and Ports**
+### 2. Services and Ports
 
 | Service        | Port  |
 |---------------|------|
-| **Eureka**    | `8761` |
-| **Order**     | `8081` |
-| **Inventory** | `8082` |
-| **Product**   | `8083` |
-| **MongoDB (Order)** | `27018` |
-| **MongoDB (Inventory)** | `27019` |
+| Eureka    | 8761 |
+| Order     | 8081 |
+| Inventory | 8082 |
+| Product   | 8083 |
+| MongoDB (Order) | 27018 |
+| MongoDB (Inventory) | 27019 |
 
 ---
 
-## **📂 Microservices Breakdown**
+## Microservices Breakdown
 
-### **1️⃣ Product Service (`product-service`)**
+### Product Service (`product-service`)
 **Responsibilities:**
-- Stores and retrieves product information (`id`, `name`, `description`, `price`).
-- Exposes a REST API to fetch product details by `skuCode`.
+- Stores and retrieves product information (id, name, description, price).
+- Exposes a REST API to fetch product details by skuCode.
 
 **Endpoints:**
 ```http
@@ -150,7 +150,7 @@ GET /api/product/getProductDetails?skuCode=APPLE-123
 
 ---
 
-### **2️⃣ Inventory Service (`inventory-service`)**
+### Inventory Service (`inventory-service`)
 **Responsibilities:**
 - Checks if a product is in stock.
 - Reduces stock after an order is placed.
@@ -171,11 +171,11 @@ PUT /api/inventory/reduce
 
 ---
 
-### **3️⃣ Order Service (`order-service`)**
+### Order Service (`order-service`)
 **Responsibilities:**
-- Calls **Inventory Service** to check stock.
-- Calls **Product Service** to fetch product details.
-- Saves order with **calculated total price**.
+- Calls Inventory Service to check stock.
+- Calls Product Service to fetch product details.
+- Saves order with calculated total price.
 
 **Endpoints:**
 ```http
@@ -202,18 +202,6 @@ GET /api/order
 }
 ```
 
----
-
-## **💡 Key Takeaways**
-✅ **Eureka** enables service discovery.  
-✅ **Feign Clients** allow inter-service communication.  
-✅ **MongoDB** stores data for each service separately.  
-✅ **Docker** runs services in isolated containers.  
-✅ **Each microservice is independent and scalable.**
-
-
-
-## **📌 Conclusion**
-This **microservices-based e-commerce system** demonstrates **scalability, modularity, and flexibility**. With **Eureka for service discovery**, **Feign for communication**, and **MongoDB for persistence**, this architecture is **ready for production enhancements**.
-
+## Conclusion
+This microservices-based e-commerce system demonstrates scalability, modularity, and flexibility. With Eureka for service discovery, Feign for communication, and MongoDB for persistence, this architecture is ready for production enhancements.
 
