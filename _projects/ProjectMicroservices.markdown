@@ -33,7 +33,6 @@ Each microservice is **independent**, communicates via **Feign Clients**, and re
 | **Eureka Server**  | Service discovery for microservices |
 | **Docker**        | Containerization for running services |
 | **Postman**       | API testing tool |
-| **Jekyll**       | Used for project documentation |
 
 ---
 
@@ -69,7 +68,7 @@ Each microservice:
 ## **🛠️ Setting Up the Project**
 ### **1️⃣ Clone the Repository**
 ```bash
-git clone https://github.com/your-repo/microservices-project.git
+git //TODO
 cd microservices-project
 ```
 
